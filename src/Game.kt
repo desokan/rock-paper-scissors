@@ -4,7 +4,6 @@ fun main (args: Array<String>) {
     println(gameChoice)
 }
 
-fun getGameChoice(optionsParams: Array<String>): String {
-    return optionsParams[(Math.random() * optionsParams.size).toInt()]
-}
+fun getGameChoice(optionsParams: Array<String>) = optionsParams[(Math.random() * optionsParams.size).toInt()]
+
 

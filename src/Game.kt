@@ -43,25 +43,54 @@
 //}
 
 
-class Song(val title: String, val artist: String) {
+//class Song(val title: String, val artist: String) {
+//    fun play() {
+//        println("Playing the song $title by $artist")
+//        println()
+//    }
+//    fun stop() {
+//        println("Stopped playing $title")
+//        println()
+//    }
+//}
+//
+//fun main(args: Array<String>) {
+//    val songOne = Song("The Mesopotamians", "They Might Be Giants")
+//    val songTwo = Song("Going Underground", "The Jam")
+//    val songThree = Song("Make Me Smile", "Steve Harley")
+//    songTwo.play()
+//    songTwo.stop()
+//    songThree.play()
+//}
 
-    fun play() {
-        println("Playing the song $title by $artist")
-        println()
+
+/* From the "Head First Kotlin" book.
+ * This program is meant to illustrate the use of classes and objects, setters,
+ * getters and arrays of objects.
+ */
+
+class Dog(val name: String, weight_param: Int, breed_param: String) {
+
+    init{
+        print("Dog $name has been created. ")
     }
 
-    fun stop() {
-        println("Stopped playing $title")
-        println()
+    var activities = arrayOf("Walks")
+    val breed = breed_param.toUpperCase()
+
+    init{
+        println("The breed is $breed.")
     }
-}
 
-fun main(args: Array<String>) {
-    val songOne = Song("The Mesopotamians", "They Might Be Giants")
-    val songTwo = Song("Going Underground", "The Jam")
-    val songThree = Song("Make Me Smile", "Steve Harley")
+    var weight = weight_param
+        set(value) {
+            if(value > 0) field = value
+        }
 
-    songTwo.play()
-    songTwo.stop()
-    songThree.play()
+    val weightInKgs: Double
+        get() = weight / 2.2
+
+    fun bark() {
+        println(if(weight < 20) "Yip!" else "Woof!")
+    }
 }

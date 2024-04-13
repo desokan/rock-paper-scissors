@@ -69,20 +69,21 @@
  * getters and arrays of objects.
  */
 
-class Dog(val name: String, weight_param: Int, breed_param: String) {
+class Dog(val name: String, weightParam: Int, breedParam: String) {
 
     init{
         print("Dog $name has been created. ")
     }
 
     var activities = arrayOf("Walks")
-    val breed = breed_param.toUpperCase()
+    val breed = breedParam.toUpperCase()
 
     init{
         println("The breed is $breed.")
     }
 
-    var weight = weight_param
+    var weight = weightParam
+        // get() = field * 2
         set(value) {
             if(value > 0) field = value
         }
@@ -97,9 +98,7 @@ class Dog(val name: String, weight_param: Int, breed_param: String) {
 
 fun main(args: Array<String>) {
     val myDog = Dog("Fido", 70, "Mixed")
-
     myDog.bark()
-
     myDog.weight = 75
     println("Weight in Kgs is ${myDog.weightInKgs}")
 

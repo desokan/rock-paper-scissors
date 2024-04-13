@@ -1,4 +1,4 @@
-fun main (args: Array<String>) {
+fun main () {
     val options: Array<String> = arrayOf("Rock", "Paper", "Scissors")
     val gameChoice = getGameChoice(options)
     val userChoice  = getUserChoice(options)
@@ -18,7 +18,7 @@ fun getUserChoice(optionsParam: Array<String>): String {
         println("=========")
 
         // read user input
-        val userInput = readlnOrNull()?.lowercase()
+        val userInput = readlnOrNull()
 
         // Validate the user input
         if (userInput != null && userInput in optionsParam) {
@@ -32,13 +32,12 @@ fun getUserChoice(optionsParam: Array<String>): String {
 }
 
 fun printResult(userChoice: String, gameChoice: String) {
-    val result: String
     //Figure out the result
-    if (userChoice == gameChoice) result = "Tie!"
+    val result: String = if (userChoice == gameChoice) "Tie!"
     else if ((userChoice == "Rock" && gameChoice == "Scissors") ||
         (userChoice == "Paper" && gameChoice == "Rock") ||
-        (userChoice == "Scissors" && gameChoice == "Paper")) result = "You win!"
-    else result = "You lose!"
+        (userChoice == "Scissors" && gameChoice == "Paper")) "You win!"
+    else "You lose!"
     //Print the result
     println("You chose $userChoice. I chose $gameChoice. $result")
 }

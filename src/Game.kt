@@ -18,7 +18,7 @@ fun getUserChoice(optionsParam: Array<String>): String {
         println("=========")
 
         // read user input
-        val userInput = readlnOrNull()
+        val userInput = readlnOrNull()?.lowercase()
 
         // Validate the user input
         if (userInput != null && userInput in optionsParam) {

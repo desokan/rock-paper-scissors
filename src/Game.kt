@@ -1,44 +1,67 @@
-fun main () {
-    val options: Array<String> = arrayOf("Rock", "Paper", "Scissors")
-    val gameChoice = getGameChoice(options)
-    val userChoice  = getUserChoice(options)
-    printResult(userChoice, gameChoice)
-}
+//fun main () {
+//    val options: Array<String> = arrayOf("Rock", "Paper", "Scissors")
+//    val gameChoice = getGameChoice(options)
+//    val userChoice  = getUserChoice(options)
+//    printResult(userChoice, gameChoice)
+//}
+//
+//fun getGameChoice(optionsParams: Array<String>): String {
+//    return optionsParams[(Math.random() * optionsParams.size).toInt()]
+//}
+//
+//fun getUserChoice(optionsParam: Array<String>): String {
+//    var isValidChoice = false
+//    var userChoice = ""
+//    while (!isValidChoice) {
+//        println("Please enter one of the following:")
+//        for(item in optionsParam) println(" $item")
+//        println("=========")
+//
+//        // read user input
+//        val userInput = readlnOrNull()
+//
+//        // Validate the user input
+//        if (userInput != null && userInput in optionsParam) {
+//            isValidChoice = true
+//            userChoice = userInput
+//        }
+//
+//        if (!isValidChoice) println("You must enter a valid choice from the list below.")
+//    }
+//    return userChoice
+//}
+//
+//fun printResult(userChoice: String, gameChoice: String) {
+//    //Figure out the result
+//    val result: String = if (userChoice == gameChoice) "Tie!"
+//    else if ((userChoice == "Rock" && gameChoice == "Scissors") ||
+//        (userChoice == "Paper" && gameChoice == "Rock") ||
+//        (userChoice == "Scissors" && gameChoice == "Paper")) "You win!"
+//    else "You lose!"
+//    //Print the result
+//    println("You chose $userChoice. I chose $gameChoice. $result")
+//}
 
-fun getGameChoice(optionsParams: Array<String>): String {
-    return optionsParams[(Math.random() * optionsParams.size).toInt()]
-}
 
-fun getUserChoice(optionsParam: Array<String>): String {
-    var isValidChoice = false
-    var userChoice = ""
-    while (!isValidChoice) {
-        println("Please enter one of the following:")
-        for(item in optionsParam) println(" $item")
-        println("=========")
+class Song(val title: String, val artist: String) {
 
-        // read user input
-        val userInput = readlnOrNull()
-
-        // Validate the user input
-        if (userInput != null && userInput in optionsParam) {
-            isValidChoice = true
-            userChoice = userInput
-        }
-
-        if (!isValidChoice) println("You must enter a valid choice from the list below.")
+    fun play() {
+        println("Playing the song $title by $artist")
+        println()
     }
-    return userChoice
+
+    fun stop() {
+        println("Stopped playing $title")
+        println()
+    }
 }
 
-fun printResult(userChoice: String, gameChoice: String) {
-    //Figure out the result
-    val result: String = if (userChoice == gameChoice) "Tie!"
-    else if ((userChoice == "Rock" && gameChoice == "Scissors") ||
-        (userChoice == "Paper" && gameChoice == "Rock") ||
-        (userChoice == "Scissors" && gameChoice == "Paper")) "You win!"
-    else "You lose!"
-    //Print the result
-    println("You chose $userChoice. I chose $gameChoice. $result")
-}
+fun main(args: Array<String>) {
+    val songOne = Song("The Mesopotamians", "They Might Be Giants")
+    val songTwo = Song("Going Underground", "The Jam")
+    val songThree = Song("Make Me Smile", "Steve Harley")
 
+    songTwo.play()
+    songTwo.stop()
+    songThree.play()
+}

@@ -152,6 +152,6 @@ class Hippo : Animal() {
     }
 
     override fun eat() {
-        println("The Hippo is eating $food")
+        println("The Hippo is eating $food.")
     }
 }

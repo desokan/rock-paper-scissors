@@ -183,7 +183,6 @@ class Vet {
 }
 
 fun main (args: Array<String>) {
-
     val animals = arrayOf(Hippo(), Wolf())
     for (animal in animals) {
         animal.makeNoise()

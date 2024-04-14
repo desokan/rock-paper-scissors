@@ -193,5 +193,4 @@ fun main (args: Array<String>) {
     val hippo = Hippo()
     vet.giveShot(wolf)
     vet.giveShot(hippo)
-
 }

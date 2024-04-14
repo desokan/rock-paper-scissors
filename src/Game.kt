@@ -187,5 +187,7 @@ fun main (args: Array<String>) {
     val vet = Vet()
     val wolf = Wolf()
     val hippo = Hippo()
+    vet.giveShot(wolf)
+    vet.giveShot(hippo)
 
 }

@@ -181,3 +181,11 @@ class Vet {
         animal.makeNoise()
     }
 }
+
+fun main (args: Array<String>) {
+
+    val vet = Vet()
+    val wolf = Wolf()
+    val hippo = Hippo()
+
+}

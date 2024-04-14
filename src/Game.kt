@@ -175,3 +175,9 @@ class Wolf : Canine() {
         println("The Wolf is eating $food")
     }
 }
+
+class Vet {
+    fun giveShot(animal: Animal) {
+        animal.makeNoise()
+    }
+}

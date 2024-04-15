@@ -54,6 +54,12 @@ class Wolf : Canine() {
     }
 }
 
+class Vehicle: Roamable {
+    override fun roam() {
+        println("This vehicle is roaming")
+    }
+}
+
 class Vet {
     fun giveShot(animal: Animal) {
         animal.makeNoise()

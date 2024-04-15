@@ -59,7 +59,11 @@ class Vet {
 fun main (args: Array<String>) {
     val animals = arrayOf(Hippo(), Wolf())
     for (animal in animals) {
+        animal.roam()
+        animal.eat()
         animal.makeNoise()
+        println()
+
     }
 
     val vet = Vet()

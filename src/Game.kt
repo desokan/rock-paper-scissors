@@ -50,6 +50,12 @@ class Wolf : Canine() {
     }
 }
 
+class Vet {
+    fun giveShot(animal: Animal) {
+        animal.makeNoise()
+    }
+}
+
 
 
 

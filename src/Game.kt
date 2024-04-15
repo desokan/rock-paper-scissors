@@ -56,7 +56,18 @@ class Vet {
     }
 }
 
+fun main (args: Array<String>) {
+    val animals = arrayOf(Hippo(), Wolf())
+    for (animal in animals) {
+        animal.makeNoise()
+    }
 
+    val vet = Vet()
+    val wolf = Wolf()
+    val hippo = Hippo()
+    vet.giveShot(wolf)
+    vet.giveShot(hippo)
+}
 
 
 //open class Animal {

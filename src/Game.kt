@@ -11,6 +11,16 @@ class Mushroom(val size: Int, val isMagic: Boolean) {
     }
 }
 
+fun findRecipes(
+    title: String = "",
+    ingredient: String = "",
+    isVegetarian: Boolean = false,
+    difficulty: String = ""
+): Array<Recipe> {
+    //Code to find recipes
+    return arrayOf(Recipe(title, ingredient, isVegetarian, difficulty))
+}
+
 fun main() {
     val r1 = Recipe("Thai Curry", "Chicken")
     val r2 = Recipe("Thai Curry", "Chicken")

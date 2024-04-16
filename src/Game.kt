@@ -6,7 +6,7 @@ data class Recipe(
 )
 
 class Mushroom(val size: Int, val isMagic: Boolean) {
-    constructor(magicParam: Boolean) : this(0, magicParam) {
+    constructor(magicParam: Boolean) : this(9, magicParam) {
         //Code that runs when the secondary constructor is called
     }
 }

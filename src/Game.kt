@@ -1,11 +1,19 @@
 data class Recipe(
     val title: String,
-    val isVegetarian: Boolean
+    val mainIngredient: String,
+    val isVegetarian: Boolean = false,
+    val difficulty: String = "Easy"
 )
 
+class Mushroom(val size: Int, val isMagic: Boolean) {
+    constructor(magicParam: Boolean) : this(0, magicParam) {
+        //Code that runs when the secondary constructor is called
+    }
+}
+
 fun main() {
-    val r1 = Recipe("Thai Curry", false)
-    val r2 = Recipe("Thai Curry", false)
+    val r1 = Recipe("Thai Curry", "Chicken")
+    val r2 = Recipe("Thai Curry", "Chicken")
     val r3 = r1.copy(title = "Chicken Bhuna")
 
     println("r1 hash code: ${r1.hashCode()}")
@@ -128,8 +136,7 @@ fun main() {
 //
 //    open fun eat() {
 //        println("The Animal is eating")
-//    }
-//
+//    }//
 //    open fun roam() {
 //        println("The Animal is roaming")
 //    }
@@ -155,6 +162,7 @@ fun main() {
 //
 //open class Canine : Animal() {
 //    override fun roam() {
+//
 //        println("The Canine is roaming")
 //    }
 //}

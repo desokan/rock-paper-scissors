@@ -21,6 +21,14 @@ fun findRecipes(
     return arrayOf(Recipe(title, ingredient, isVegetarian, difficulty))
 }
 
+fun addNumbers(a: Int, b: Int) : Int {
+    return a + b
+}
+
+fun addNumbers(a: Double, b: Double) : Double {
+    return a + b
+}
+
 fun main() {
     val r1 = Recipe("Thai Curry", "Chicken")
     val r2 = Recipe(title = "Thai Curry", mainIngredient = "Chicken")
@@ -42,6 +50,9 @@ fun main() {
     println("m1 size is ${m1.size} and isMagic is ${m1.isMagic}")
     val m2 = Mushroom(true)
     println("m2 size is ${m2.size} and isMagic is ${m2.isMagic}")
+
+    println(addNumbers(2,5))
+    println(addNumbers(1.6,7.3))
 }
 
 //interface Roamable {

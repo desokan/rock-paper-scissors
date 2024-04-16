@@ -12,6 +12,7 @@ fun main() {
     println("r2 hash code: ${r2.hashCode()}")
     println("r3 hash code: ${r3.hashCode()}")
     println("r1 toString: ${r1.toString()}")
+    println("r3 toString: ${r3.toString()}")
     println("r1 == r2? ${r1 == r2}")
     println("r1 === r2? ${r1 === r2}")
     println("r1 == r3? ${r1 == r3}")

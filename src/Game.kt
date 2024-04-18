@@ -7,6 +7,14 @@ class Wolf {
     }
 }
 
+class MyWolf {
+    var wolf: Wolf? = Wolf()
+
+    fun myFunction() {
+        wolf?.eat()
+    }
+}
+
 //data class Recipe(
 //    val title: String,
 //    val mainIngredient: String,

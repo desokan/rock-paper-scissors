@@ -15,6 +15,10 @@ class MyWolf {
     }
 }
 
+fun getAlphaWolf(): Wolf? {
+    return Wolf()
+}
+
 //data class Recipe(
 //    val title: String,
 //    val mainIngredient: String,

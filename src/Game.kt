@@ -5,6 +5,9 @@ fun myFunction(str: String) {
     } catch(e : NumberFormatException) {
         print("Not possible")
     }
+    finally {
+        println("Clean up")
+    }
 
     println("My function has ended")
 }

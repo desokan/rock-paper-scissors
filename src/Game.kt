@@ -1,25 +1,41 @@
 class BadException : Exception()
 
-fun myFunction(test: String) {
-    print("t")
-    print("h")
-
-    try{
+fun main (args: Array<String>) {
+    val test: String = "No"
+    try {
+        println("Start try")
         riskyCode(test)
-    } catch(e : BadException) {
-        print("a")
-    }
-    finally{
-        print("w")
-        print("s")
+        println("End try")
+    } catch (e: BadException) {
+        println("Bad Exception")
+    } finally {
+        println("End of main")
     }
 }
 
-fun setWorkRatePercentage(x:Int) {
-    if (x !in 0..100) {
-        throw illegalArgumentException("Percentage not in range 0..100: $x")
+fun riskyCode(test: String) {
+    println("Start risky code")
+    if (test == "Yes") {
+        throw BadException()
     }
+    println("End risky code")
 }
+
+
+//fun myFunction(test: String) {
+//    print("t")
+//    print("h")
+//
+//    try {
+//        riskyCode(test)
+//    } catch(e : BadException) {
+//        print("a")
+//    } finally{
+//        print("w")
+//        print("s")
+//    }
+//}
+
 
 //class Wolf {
 //    var hunger = 10

@@ -9,8 +9,9 @@ fun main (args: Array<String>) {
     } catch (e: BadException) {
         println("Bad Exception")
     } finally {
-        println("End of main")
+        println("Finally")
     }
+    println("End of main")
 }
 
 fun riskyCode(test: String) {

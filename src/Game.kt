@@ -1,15 +1,24 @@
-fun myFunction(str: String) {
-    try{
-        val x = str.toInt()
-        println(x)
-    } catch(e : NumberFormatException) {
-        print("Not possible")
-    }
-    finally {
-        println("Clean up")
-    }
+class BadException : Exception()
 
-    println("My function has ended")
+fun myFunction(test: String) {
+    print("t")
+    print("h")
+
+    try{
+        riskyCode(test)
+    } catch(e : BadException) {
+        print("a")
+    }
+    finally{
+        print("w")
+        print("s")
+    }
+}
+
+fun setWorkRatePercentage(x:Int) {
+    if (x !in 0..100) {
+        throw illegalArgumentException("Percentage not in range 0..100: $x")
+    }
 }
 
 //class Wolf {

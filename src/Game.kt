@@ -1,26 +1,31 @@
-class BadException : Exception()
-
-fun main (args: Array<String>) {
-    val test: String = "No"
-    try {
-        println("Start try")
-        riskyCode(test)
-        println("End try")
-    } catch (e: BadException) {
-        println("Bad Exception")
-    } finally {
-        println("Finally")
-    }
-    println("End of main")
+fun main(args: Array<String>) {
+    val mShoppingList = mutableListOf("Tea", "Eggs", "Milk")
+    println("mShoppingList original: $mShoppingList")
 }
 
-fun riskyCode(test: String) {
-    println("Start risky code")
-    if (test == "Yes") {
-        throw BadException()
-    }
-    println("End risky code")
-}
+//class BadException : Exception()
+//
+//fun main (args: Array<String>) {
+//    val test: String = "No"
+//    try {
+//        println("Start try")
+//        riskyCode(test)
+//        println("End try")
+//    } catch (e: BadException) {
+//        println("Bad Exception")
+//    } finally {
+//        println("Finally")
+//    }
+//    println("End of main")
+//}
+//
+//fun riskyCode(test: String) {
+//    println("Start risky code")
+//    if (test == "Yes") {
+//        throw BadException()
+//    }
+//    println("End risky code")
+//}
 
 
 //fun myFunction(test: String) {

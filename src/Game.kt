@@ -1,6 +1,8 @@
 fun main(args: Array<String>) {
     val mShoppingList = mutableListOf("Tea", "Eggs", "Milk")
     println("The mutable shopping list is: $mShoppingList")
+
+    val extraShopping = listOf("Cookies", "Sugar", "Eggs")
 }
 
 //class BadException : Exception()

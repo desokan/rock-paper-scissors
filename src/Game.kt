@@ -3,6 +3,8 @@ fun main(args: Array<String>) {
     println("The mutable shopping list is: $mShoppingList")
 
     val extraShopping = listOf("Cookies", "Sugar", "Eggs")
+    mShoppingList.addAll(extraShopping)
+    println("mShoppingList items added: $mShoppingList")
 }
 
 //class BadException : Exception()

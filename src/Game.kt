@@ -5,6 +5,9 @@ fun main(args: Array<String>) {
     val extraShopping = listOf("Cookies", "Sugar", "Eggs")
     mShoppingList.addAll(extraShopping)
     println("mShoppingList items added: $mShoppingList")
+
+    if (mShoppingList.contains("Tea"))
+        mShoppingList.set(mShoppingList.indexOf("Tea"), "Coffee")
 }
 
 //class BadException : Exception()

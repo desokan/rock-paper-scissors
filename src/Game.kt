@@ -8,6 +8,12 @@ fun main(args: Array<String>) {
 
     if (mShoppingList.contains("Tea"))
         mShoppingList.set(mShoppingList.indexOf("Tea"), "Coffee")
+
+    mShoppingList.sort()
+    println("mShoppingList sorted: $mShoppingList")
+
+    mShoppingList.reverse()
+    println("mShoppingList reversed: $mShoppingList")
 }
 
 //class BadException : Exception()

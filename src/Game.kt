@@ -22,6 +22,10 @@ class Contest<T: Pet>() {
     }
 }
 
+interface Retailer<out T> {
+    fun sell(): T
+}
+
 fun main(args: Array<String>) {
     val catFuzz = Cat("Fuzz Lightyear")
     val catKatsu = Cat("Katsu")

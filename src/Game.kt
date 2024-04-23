@@ -9,6 +9,17 @@ class Contest<T: Pet>() {
     fun addScore(t: T, score: Int = 0) {
         if (score >= 0) scores.put(t, score)
     }
+
+    fun getWinners(): MutableSet<T> {
+        val winners: MutableSet<T> = mutableSetOf()
+        val highScore = scores.values.maxOrNull<Int>() ?: 0
+
+        for((t, score) in scores) {
+            if (score == highScore) winners.add(t)
+        }
+
+        return winners
+    }
 }
 
 //data class Recipe(var name: String)

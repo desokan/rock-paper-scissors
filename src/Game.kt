@@ -26,6 +26,13 @@ interface Retailer<out T> {
     fun sell(): T
 }
 
+class CatRetailer : Retailer<Cat> {
+    override fun sell(): Cat {
+        println("Sell Cat")
+        return Cat("")
+    }
+}
+
 fun main(args: Array<String>) {
     val catFuzz = Cat("Fuzz Lightyear")
     val catKatsu = Cat("Katsu")

@@ -33,6 +33,20 @@ class CatRetailer : Retailer<Cat> {
     }
 }
 
+class DogRetailer : Retailer<Dog> {
+    override fun sell(): Dog {
+        println("Sell Dog")
+        return Dog("")
+    }
+}
+
+class FishRetailer : Retailer<Fish> {
+    override fun sell(): Fish {
+        println("Sell Fish")
+        return Fish("")
+    }
+}
+
 fun main(args: Array<String>) {
     val catFuzz = Cat("Fuzz Lightyear")
     val catKatsu = Cat("Katsu")

@@ -3,6 +3,10 @@ class Cat(name: String) : Pet(name)
 class Dog(name: String) : Pet(name)
 class Fish(name: String) : Pet(name)
 
+class Contest<T: Pet>(var vet: Vet<in T>) {
+
+}
+
 //data class Recipe(var name: String)
 //
 //fun main(args: Array<String>) {

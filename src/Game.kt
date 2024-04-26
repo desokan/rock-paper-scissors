@@ -59,6 +59,10 @@ fun main(args: Array<String>) {
     val catKatsu = Cat("Katsu")
     val fishFinny = Fish("Finny McGraw")
 
+    val catVet = Vet<Cat>()
+    val fishVet = Vet<Fish>()
+    val petVet = Vet<Pet>()
+
     val catContest = Contest<Cat>()
     catContest.addScore(catFuzz, 50)
     catContest.addScore(catKatsu, 45)

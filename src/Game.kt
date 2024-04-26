@@ -20,6 +20,7 @@ class Contest<T: Pet>() {
 
         return winners
     }
+
 }
 
 interface Retailer<out T> {

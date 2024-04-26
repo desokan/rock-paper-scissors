@@ -63,13 +63,17 @@ fun main(args: Array<String>) {
     val fishVet = Vet<Fish>()
     val petVet = Vet<Pet>()
 
-    val catContest = Contest<Cat>()
+    catVet.treat(catFuzz)
+    petVet.treat(catKatsu)
+    petVet.treat(fishFinny)
+
+    val catContest = Contest<Cat>(catVet)
     catContest.addScore(catFuzz, 50)
     catContest.addScore(catKatsu, 45)
     val topCat = catContest.getWinners().first()
     println("Cat contest winner is ${topCat.name}")
 
-    val petContest = Contest<Pet>()
+    val petContest = Contest<Pet>(petVet)
     petContest.addScore(catFuzz, 50)
     petContest.addScore(fishFinny, 56)
     val topPet = petContest.getWinners().first()
